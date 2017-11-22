@@ -46,7 +46,7 @@ class HTTPFrontend(object):
 
         @app.route('/large/<path:path>')
         def static_file_large(path):
-            return open("ui/large/" + path).read()
+            return open("ui/large/" + path, 'rb').read()
 
         @app.route('/')
         def home():
